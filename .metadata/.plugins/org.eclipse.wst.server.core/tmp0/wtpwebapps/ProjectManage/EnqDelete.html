@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>EnqDelete.html</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+body{
+background: gray;
+}
+.row{
+background: white;
+border-radius: 30px;
+box-shadow: 12px 12px 22px gray;
+}
+
+.id3{
+margin: 10px;
+height: 80px;
+width: 80px;
+}
+
+body{
+background-color: rgba(203, 195, 227);
+}
+.box1{
+border-top-left-radius: 30px;
+border-bottom-left-radius: 30px;
+height: 550px;
+width:450px;
+background-color: purple;
+
+}
+#xyz{
+margin-top: 35px;
+
+}
+.box{
+marging-top: 20px;
+}
+#col{
+padding-top: 120px;
+padding-left: 50px;
+
+
+}
+.btn{
+width: 100%;
+margin-top: 10px;
+color: white;
+background-color: purple;
+box-shadow: 12px 12px 22px gray;
+}
+img{
+border-top-left-radius: 30px;
+border-bottom-left-radius: 30px;
+border-top-right-radius: 30px;
+border-bottom-right-radius: 30px;
+box-shadow: 12px 12px 22px gray;
+margin-left: 0px;
+}
+</style>
+</head>
+<body>
+<div class="container" >
+<div class="row">
+<div class="col-lg-12">
+	<h1 class="text-center">E-GAIN</h1>
+</div>
+</div>
+</div>
+
+<section class="Form my-4 mx-5 " id="xyz">
+<div class="container">
+<div class="row"  >
+<div class="col-lg-5">
+<img alt="" src="./ims12.jpg" class="img-fluid img-responsive" >
+<!--  <div class="box1"></div>-->
+</div>
+<div class="col-lg-7 no-gutters" id="col">
+<form name="myf" action="EnqDel.jsp" onsubmit="return validation()" method="get" >
+<div class="form-row" >
+<div class="col-lg-7"  >
+<h1 class="font-weight-bold py-2">DELETE EQUIRY</h1>
+<label>EnquiryId:</label><br>
+<input type="text" name="EnquiryId" placeholder="Enter your Enquiry No" class="form-control" id="EnquiryId" >
+<span id='A1' class="text-danger font-weight-bold" ></span>
+</div>
+</div>
+
+<div class="form-row" >
+<div class="col-lg-7"  >
+<input type="submit" value="Delete" class="btn">
+<input type="submit" value="Exit" class="btn">
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<script type="text/javascript">
+	function validation()
+	{
+		var enquiryid = document.getElementById('EnquiryId').value;
+		
+		if(enquiryid == "")
+			{
+				document.getElementById('A1').innerHTML="**Please fill the Enquiryid field";
+				return false;
+			}	
+	}
+</script>
+</body>
+</html>

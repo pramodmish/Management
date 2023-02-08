@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>EnqUpdate.html</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+body{
+background: gray;
+}
+.row{
+background: white;
+border-radius: 30px;
+box-shadow: 12px 12px 22px gray;
+}
+
+.id3{
+margin: 10px;
+height: 80px;
+width: 80px;
+}
+
+body{
+background-color: rgba(203, 195, 227);
+}
+.box1{
+border-top-left-radius: 30px;
+border-bottom-left-radius: 30px;
+height: 550px;
+width:450px;
+background-color: purple;
+
+}
+#xyz{
+margin-top: 35px;
+
+}
+.box{
+marging-top: 20px;
+}
+#col{
+padding-top: 0px;
+padding-left: 50px;
+
+
+}
+.btn{
+width: 100%;
+margin-top: 10px;
+color: white;
+background-color: purple;
+box-shadow: 12px 12px 22px gray;
+}
+img{
+border-top-left-radius: 30px;
+border-bottom-left-radius: 30px;
+border-top-right-radius: 30px;
+border-bottom-right-radius: 30px;
+box-shadow: 12px 12px 22px gray;
+margin-left: 0px;
+}
+</style>
+</head>
+<body>
+<div class="container" >
+<div class="row">
+<div class="col-lg-12">
+	<h1 class="text-center">E-GAIN</h1>
+</div>
+</div>
+</div>
+
+<section class="Form my-4 mx-5 " id="xyz">
+<div class="container">
+<div class="row"  >
+<div class="col-lg-5">
+<img alt="" src="./ims12.jpg" class="img-fluid img-responsive" >
+<!--  <div class="box1"></div>-->
+</div>
+<div class="col-lg-7 no-gutters" id="col">
+<form name="myf" action="EnqUpd.jsp" onsubmit="return validation()" method="get" >
+<div class="form-row" >
+<div class="col-lg-7"  >
+<h3 class="font-weight-bold py-2">UPDATE EQUIRY</h3>
+<label>EnquiryId:</label><br>
+<input type="text" name="EnquiryId" placeholder="Enter your Enquiry No" class="form-control" id="EnquiryId">
+<span id='A1' class="text-danger font-weight-bold" ></span>
+</div>
+</div>
+<div class="form-row" >
+<div class="col-lg-7"  >
+<label>EName:</label><br>
+<input type="text" name="EName" placeholder="Enter your Name" class="form-control" id="EName" >
+<span id='A2' class="text-danger font-weight-bold" ></span>
+</div>
+</div>
+<div class="form-row" >
+<div class="col-lg-7"  >
+<label>Address:</label><br>
+<input type="text" name="EAdd" placeholder="Enter your Address" class="form-control" id="EAdd">
+<span id='A3' class="text-danger font-weight-bold" ></span>
+</div>
+</div>
+<div class="form-row" >
+<div class="col-lg-7"  >
+<label>Email:</label><br>
+<input type="text" name="Email" placeholder="Enter your Email" class="form-control" id="Email">
+<span id='A4' class="text-danger font-weight-bold" ></span>
+</div>
+</div>
+<div class="form-row" >
+<div class="col-lg-7"  >
+<label>Phone:</label><br>
+<input type="text" name="Phone" placeholder="Enter your Phone" class="form-control" id="Phone">
+<span id='A5' class="text-danger font-weight-bold" ></span>
+</div>
+</div>
+<div class="form-row" >
+<div class="col-lg-7"  >
+<label>CourseId:</label><br>
+<input type="text" name="CourseId" placeholder="Enter your CourseId" class="form-control" id="CourseId" >
+<span id='A6' class="text-danger font-weight-bold" ></span>
+</div>
+</div>
+<div class="form-row" >
+<div class="col-lg-7"  >
+<label>Date of Enquiry:</label><br>
+<input type="text" name="DateofEnquiry" placeholder="Enter Date of Enquiry" class="form-control" id="DateofEnquiry" >
+<span id='A7' class="text-danger font-weight-bold" ></span>
+</div>
+</div>
+<div class="form-row" >
+<div class="col-lg-7"  >
+<input type="submit" value="Update" class="btn">
+<input type="submit" value="Cancel" class="btn">
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<script type="text/javascript">
+	function validation()
+	{
+		var enquiryid = document.getElementById('EnquiryId').value;
+		var name = document.getElementById('EName').value;
+		var address = document.getElementById('EAdd').value;
+		var email = document.getElementById('Email').value;
+		var phone = document.getElementById('Phone').value;
+		var courseid = document.getElementById('CourseId').value;
+		var dateofenquiry = document.getElementById('DateofEnquiry').value;
+		if(enquiryid == "")
+			{
+				document.getElementById('A1').innerHTML="**Please fill the Enquiryid field";
+				return false;
+			}
+		if(name == "")
+		{
+			document.getElementById('A2').innerHTML="**Please fill the Name field";
+			return false;
+		}
+		if(address == "")
+		{
+			document.getElementById('A3').innerHTML="**Please fill the Address field";
+			return false;
+		}
+		if(email == "")
+		{
+			document.getElementById('A4').innerHTML="**Please fill the Email field";
+			return false;
+		}
+		if(phone == "")
+		{
+			document.getElementById('A5').innerHTML="**Please fill the phone field";
+			return false;
+		}
+		if(courseid == "")
+		{
+			document.getElementById('A6').innerHTML="**Please fill the courseId field";
+			return false;
+		}
+		if(dateofenquiry == "")
+		{
+			document.getElementById('A7').innerHTML="**Please fill the date of enquiry field";
+			return false;
+		}
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Update.html</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+body{
+background: gray;
+}
+.row{
+background: white;
+border-radius: 30px;
+box-shadow: 12px 12px 22px gray;
+}
+
+.id3{
+margin: 10px;
+height: 80px;
+width: 80px;
+}
+
+body{
+background-color: rgba(203, 195, 227);
+}
+.box1{
+border-top-left-radius: 30px;
+border-bottom-left-radius: 30px;
+height: 550px;
+width:450px;
+background-color: purple;
+
+}
+#xyz{
+margin-top: 35px;
+
+}
+.box{
+marging-top: 20px;
+}
+#col{
+padding-top: 75px;
+padding-left: 50px;
+
+
+}
+.btn{
+width: 32%;
+margin-top: 10px;
+color: white;
+background-color: purple;
+box-shadow: 12px 12px 22px gray;
+}
+img{
+border-top-left-radius: 30px;
+border-bottom-left-radius: 30px;
+border-top-right-radius: 30px;
+border-bottom-right-radius: 30px;
+box-shadow: 12px 12px 22px gray;
+margin-left: 0px;
+}
+</style>
+</head>
+<body>
+
+<div class="container" >
+<div class="row">
+<div class="col-lg-12">
+	<h1 class="text-center">E-GAIN</h1>
+</div>
+</div>
+</div>
+
+<section class="Form my-4 mx-5 " id="xyz">
+<div class="container">
+<div class="row"  >
+<div class="col-lg-5">
+<img alt="" src="./ims12.jpg" class="img-fluid img-responsive" >
+<!--  <div class="box1"></div>-->
+</div>
+<div class="col-lg-7 no-gutters" id="col">
+<form name="myf" action="CouUpdate.jsp" onsubmit="return validation()" method="get" >
+<div class="form-row" >
+<div class="col-lg-7"  >
+<h2 class="font-weight-bold py-2">ADD NEW COURSE</h2>
+<label>CourseId:</label><br>
+<input type="text" name="CourseId" placeholder="Enter CourseId" class="form-control" id="CourseId" >
+<span id='Course' class="text-danger font-weight-bold" ></span>
+</div>
+</div>
+<div class="form-row">
+<div class="col-lg-7">
+<label>CourseName:</label><br>
+<input type="text" name="CName" placeholder="Enter Course Name" class="form-control" id="CName" >
+<span id='Name' class="text-danger font-weight-bold"></span>
+</div>
+</div>
+<div class="form-row">
+<div class="col-lg-7">
+<label>Duration:</label><br>
+<input type="text" name="Duration" placeholder="Course Duration" class="form-control" id="Duration" >
+<span id='Due' class="text-danger font-weight-bold"></span>
+</div>
+</div>
+<div class="form-row">
+<div class="col-lg-7">
+<label>Fees:</label><br>
+<input type="text" name="Fees" placeholder="Course Fees" class="form-control" id="Fees">
+<span id='Fee' class="text-danger font-weight-bold"></span>
+</div>
+</div>
+<div class="form-row">
+<div class="col-lg-7">
+<input type="submit" value="Saved" class="btn" id="but">
+<input type="reset" value="Reset" class="btn" id="but2">
+<input  type="button" value="Exit" onclick="self.close();" class="btn" id="but1">
+</div>
+</div>
+
+</form>
+</div>
+</div>
+</div>
+</section>
+<script type="text/javascript">
+	function validation()
+	{
+		var CourseId = document.getElementById('CourseId').value;
+		var CName = document.getElementById('CName').value;
+		var Duration = document.getElementById('Duration').value;
+		var Fees = document.getElementById('Fees').value;
+		if(CourseId == "")
+			{
+				document.getElementById('Course').innerHTML="**Please fill the CourseId field";
+				return false;
+			}
+		if(CName == "")
+		{
+			document.getElementById('Name').innerHTML="**Please fill the Course field";
+			return false;
+		}
+		if(Duration == "")
+		{
+			document.getElementById('Due').innerHTML="**Please fill the Duration field";
+			return false;
+		}
+		if(Fees == "")
+		{
+			document.getElementById('Fee').innerHTML="**Please fill the Fees field";
+			return false;
+		}
+	}
+</script>
+</body>
+</html>

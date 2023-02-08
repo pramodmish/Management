@@ -1,0 +1,7 @@
+127.0.0.1 - - [31/Aug/2021:22:40:34 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [31/Aug/2021:22:40:58 +0530] "GET /ProjectManage/Course.html HTTP/1.1" 200 4095
+0:0:0:0:0:0:0:1 - - [31/Aug/2021:22:40:59 +0530] "GET /ProjectManage/ims12.jpg HTTP/1.1" 200 34203
+0:0:0:0:0:0:0:1 - - [31/Aug/2021:22:40:59 +0530] "GET /favicon.ico HTTP/1.1" 404 973
+0:0:0:0:0:0:0:1 - - [31/Aug/2021:22:41:50 +0530] "GET /ProjectManage/CouUpdate.jsp?CourseId=3457&CName=python&Duration=60&Fees=10000 HTTP/1.1" 200 152
+0:0:0:0:0:0:0:1 - - [31/Aug/2021:22:43:17 +0530] "GET /ProjectManage/Navbar.html HTTP/1.1" 200 1284
+0:0:0:0:0:0:0:1 - - [31/Aug/2021:22:43:40 +0530] "GET /ProjectManage/CDelete.html HTTP/1.1" 200 2769

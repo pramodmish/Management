@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>AdmiInsert.html</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+body{
+background: gray;
+}
+.row{
+background: white;
+border-radius: 30px;
+box-shadow: 12px 12px 22px gray;
+}
+
+.id3{
+margin: 10px;
+height: 80px;
+width: 80px;
+}
+
+body{
+background-color: rgba(203, 195, 227);
+}
+.box1{
+border-top-left-radius: 30px;
+border-bottom-left-radius: 30px;
+height: 550px;
+width:450px;
+background-color: purple;
+
+}
+#xyz{
+margin-top: 35px;
+
+}
+.box{
+marging-top: 20px;
+}
+#col{
+padding-top: 0px;
+padding-left: 50px;
+
+
+}
+.btn{
+width: 100%;
+margin-top: 10px;
+color: white;
+background-color: purple;
+box-shadow: 12px 12px 22px gray;
+}
+img{
+border-top-left-radius: 30px;
+border-bottom-left-radius: 30px;
+border-top-right-radius: 30px;
+border-bottom-right-radius: 30px;
+box-shadow: 12px 12px 22px gray;
+margin-left: 0px;
+}
+</style>
+</head>
+<body>
+<div class="container" >
+<div class="row">
+<div class="col-lg-12">
+	<h1 class="text-center">E-GAIN</h1>
+</div>
+</div>
+</div>
+
+<section class="Form my-4 mx-5 " id="xyz">
+<div class="container">
+<div class="row"  >
+<div class="col-lg-5">
+<img alt="" src="./ims12.jpg" class="img-fluid img-responsive" >
+<!--  <div class="box1"></div>-->
+</div>
+<div class="col-lg-7 no-gutters" id="col">
+<form name="myf" action="AdmiIns.jsp" onsubmit="return validation()" method="get" >
+<div class="form-row" >
+<div class="col-lg-7"  >
+<h3 class="font-weight-bold py-2">ADD NEW ADMISSION</h3>
+<label>RollNo:</label><br>
+<input type="text" name="RollNo" placeholder="Enter your RollNo" class="form-control" id="RollNo" >
+<span id='A1' class="text-danger font-weight-bold" ></span>
+</div>
+</div>
+<div class="form-row">
+<div class="col-lg-7">
+<label>Name:</label><br>
+<input type="text" name="Name" placeholder="Enter your Name" class="form-control" id="Name" >
+<span id='A2' class="text-danger font-weight-bold" ></span>
+</div>
+</div>
+<div class="form-row">
+<div class="col-lg-7">
+<label>Address:</label><br>
+<input type="text" name="Address" placeholder="Enter your Address" class="form-control" id="Address" >
+<span id='A3' class="text-danger font-weight-bold" ></span>
+</div>
+</div>
+<div class="form-row">
+<div class="col-lg-7">
+<label>Phone:</label><br>
+<input type="text" name="Phone" placeholder="Enter your Phone" class="form-control" id="Phone" >
+<span id='A4' class="text-danger font-weight-bold" ></span>
+</div>
+</div>
+<div class="form-row">
+<div class="col-lg-7">
+<label>CourseId:</label><br>
+<input type="text" name="CourseId" placeholder="Enter Course Id" class="form-control" id="CourseId" >
+<span id='A5' class="text-danger font-weight-bold" ></span>
+</div>
+</div>
+<div class="form-row">
+<div class="col-lg-7">
+<label>Date of Admission:</label><br>
+<input type="text" name="DateofAdm" placeholder="Enter Admission Date" class="form-control" id="DateofAdm">
+<span id='A6' class="text-danger font-weight-bold" ></span>
+</div>
+</div>
+<div class="form-row">
+<div class="col-lg-7">
+<label>Remarks:</label><br>
+<input type="text" name="Remarks" placeholder="Remarks" class="form-control" id="Remarks" >
+<span id='A7' class="text-danger font-weight-bold" ></span>
+</div>
+</div>
+<div class="form-row">
+<div class="col-lg-7">
+<input type="submit" value="Saved" class="btn" id="but">
+<input type="submit" value="Exit" class="btn" id="but1">
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<script type="text/javascript">
+	function validation()
+	{
+		var rollno = document.getElementById('RollNo').value;
+		var name = document.getElementById('Name').value;
+		var address = document.getElementById('Address').value;
+		var phone = document.getElementById('Phone').value;
+		var course = document.getElementById('CourseId').value;
+		var dateofadm = document.getElementById('DateofAdm').value;
+		var remarks = document.getElementById('Remarks').value;
+		if(rollno == "")
+			{
+				document.getElementById('A1').innerHTML="**Please fill the RollNo field";
+				return false;
+			}
+		if(name == "")
+		{
+			document.getElementById('A2').innerHTML="**Please fill the Name field";
+			return false;
+		}
+		if(address == "")
+		{
+			document.getElementById('A3').innerHTML="**Please fill the Address field";
+			return false;
+		}
+		if(phone == "")
+		{
+			document.getElementById('A4').innerHTML="**Please fill the Phone field";
+			return false;
+		}
+		if(course == "")
+		{
+			document.getElementById('A5').innerHTML="**Please fill the Course field";
+			return false;
+		}
+		if(dateofadm == "")
+		{
+			document.getElementById('A6').innerHTML="**Please fill the Date of Adm field";
+			return false;
+		}
+		if(remarks == "")
+		{
+			document.getElementById('A7').innerHTML="**Please fill the Remarks field";
+			return false;
+		}
+	}
+</script>
+</body>
+</html>
